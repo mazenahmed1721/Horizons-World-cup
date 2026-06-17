@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f7f2;
+  color: #111;
+}
+
+nav {
+  height: 70px;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  background: #ffffff;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav h2 {
+  margin-right: auto;
+  color: #087443;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  min-height: 90vh;
+  padding: 60px;
+  display: flex;
+  align-items: center;
+  color: white;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url("https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero div {
+  max-width: 650px;
+}
+
+.hero h1 {
+  font-size: 70px;
+  margin: 10px 0;
+}
+
+.hero p {
+  font-size: 20px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 22px;
+  background: #d7a735;
+  color: #111;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  padding: 70px 40px;
+}
+
+section h2 {
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.card {
+  min-height: 330px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  color: white;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+}
+
+.card * {
+  position: relative;
+  z-index: 1;
+}
+
+.card h3 {
+  font-size: 28px;
+  margin: 5px 0;
+}
+
+.champions {
+  max-width: 800px;
+}
+
+.champion-row {
+  display: grid;
+  grid-template-columns: 120px 1fr 40px;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 16px;
+}
+
+.country {
+  font-weight: bold;
+}
+
+.track {
+  height: 18px;
+  background: #ddd;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background: linear-gradient(90deg, #087443, #d7a735);
+  border-radius: 50px;
+}
+
+.count {
+  font-weight: bold;
+  color: #c0392b;
+  text-align: right;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.facts div {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+footer {
+  padding: 25px;
+  text-align: center;
+  background: #111;
+  color: white;
+}
+
+@media (max-width: 800px) {
+  nav {
+    height: auto;
+    padding: 15px;
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    padding: 30px;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+  }
+
+  .cards,
+  .facts {
+    grid-template-columns: 1fr;
+  }
+
+  .champion-row {
+    grid-template-columns: 90px 1fr 30px;
+  }
+}

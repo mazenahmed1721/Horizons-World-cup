@@ -1,197 +1,167 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
+.page-section h2 {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f7f7f2;
-  color: #111;
-}
-
-nav {
-  height: 70px;
-  padding: 0 40px;
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  background: #ffffff;
-  border-bottom: 1px solid #ddd;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-nav h2 {
-  margin-right: auto;
-  color: #087443;
-}
-
-nav a {
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.hero {
-  min-height: 90vh;
-  padding: 60px;
-  display: flex;
-  align-items: center;
-  color: white;
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
-    url("https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?auto=format&fit=crop&w=1600&q=80");
-  background-size: cover;
-  background-position: center;
-}
-
-.hero div {
-  max-width: 650px;
-}
-
-.hero h1 {
-  font-size: 70px;
-  margin: 10px 0;
-}
-
-.hero p {
-  font-size: 20px;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 12px 22px;
-  background: #d7a735;
-  color: #111;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-section {
-  padding: 70px 40px;
-}
-
-section h2 {
   font-size: 36px;
-  margin-bottom: 25px;
 }
 
-.cards {
+.section-intro {
+  max-width: 700px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.light-section {
+  max-width: 100%;
+  background-color: #ffffff;
+}
+
+.light-section h2,
+.light-section .section-intro,
+.champions-list {
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cards-container {
+  margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+  gap: 20px;
 }
 
-.card {
+.winner-card {
   min-height: 330px;
   padding: 22px;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
   color: white;
   border-radius: 10px;
+  overflow: hidden;
   background-size: cover;
   background-position: center;
   position: relative;
-  overflow: hidden;
 }
 
-.card::before {
+.winner-card::before {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
 }
 
-.card * {
+.winner-card h3,
+.winner-card p {
   position: relative;
   z-index: 1;
-}
-
-.card h3 {
-  font-size: 28px;
   margin: 5px 0;
 }
 
-.champions {
-  max-width: 800px;
+.winner-card h3 {
+  font-size: 28px;
+}
+
+.winner-year {
+  color: #f0c34e;
+  font-weight: bold;
+}
+
+.champions-list {
+  margin-top: 30px;
 }
 
 .champion-row {
-  display: grid;
-  grid-template-columns: 120px 1fr 40px;
-  align-items: center;
-  gap: 15px;
   margin-bottom: 16px;
+  display: grid;
+  grid-template-columns: 120px 1fr 45px;
+  gap: 15px;
+  align-items: center;
 }
 
-.country {
+.country-name {
   font-weight: bold;
 }
 
-.track {
+.bar {
   height: 18px;
-  background: #ddd;
-  border-radius: 50px;
+  background-color: #dddddd;
+  border-radius: 20px;
   overflow: hidden;
 }
 
-.fill {
+.bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, #087443, #d7a735);
-  border-radius: 50px;
+  background: linear-gradient(90deg, #0c7445, #f0c34e);
+  border-radius: 20px;
 }
 
-.count {
-  font-weight: bold;
+.wins {
   color: #c0392b;
+  font-weight: bold;
   text-align: right;
 }
 
-.facts {
+.facts-container {
+  margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+  gap: 20px;
 }
 
-.facts div {
-  background: white;
+.fact-box {
   padding: 25px;
+  background-color: white;
+  border: 1px solid #dddddd;
   border-radius: 10px;
-  border: 1px solid #ddd;
+}
+
+.fact-box h3 {
+  margin-top: 0;
+  color: #0c7445;
+}
+
+.fact-box p {
+  color: #555;
+  line-height: 1.6;
 }
 
 footer {
   padding: 25px;
   text-align: center;
-  background: #111;
   color: white;
+  background-color: #111;
 }
 
-@media (max-width: 800px) {
-  nav {
-    height: auto;
-    padding: 15px;
+footer p {
+  margin: 0;
+}
+
+@media (max-width: 850px) {
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    padding: 18px 25px;
+  }
+
+  .nav-links {
     flex-wrap: wrap;
   }
 
   .hero {
-    padding: 30px;
+    padding: 40px 25px;
   }
 
   .hero h1 {
     font-size: 44px;
   }
 
-  .cards,
-  .facts {
+  .cards-container,
+  .facts-container {
     grid-template-columns: 1fr;
   }
 
   .champion-row {
-    grid-template-columns: 90px 1fr 30px;
+    grid-template-columns: 95px 1fr 35px;
   }
 }

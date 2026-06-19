@@ -1,62 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>World Cup 2026</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <nav>
+    <nav class="navbar">
       <h2>World Cup 2026</h2>
-      <a href="#recent">Recent Winners</a>
-      <a href="#champions">Champions</a>
-      <a href="#facts">2026 Facts</a>
+      <div class="nav-links">
+        <a href="#winners">Recent Winners</a>
+        <a href="#champions">Champions</a>
+        <a href="#facts">2026 Facts</a>
+      </div>
     </nav>
 
     <section class="hero">
-      <div>
-        <p>Canada • Mexico • United States</p>
+      <div class="hero-text">
+        <p class="small-title">Canada - Mexico - United States</p>
         <h1>FIFA World Cup 2026</h1>
-        <p>The next World Cup is coming. Here are the recent winners and every country that has won the trophy.</p>
-        <a href="#recent" class="btn">Explore</a>
+        <p>
+          The biggest football tournament is coming back. This page shows
+          some recent World Cup winners and every country that has won the cup.
+        </p>
+        <a href="#winners" class="main-btn">Start Exploring</a>
       </div>
     </section>
   </header>
 
   <main>
-    <section id="recent">
+    <section id="winners" class="page-section">
       <h2>Last Few World Cup Winners</h2>
-      <div id="winnerCards" class="cards"></div>
+      <p class="section-intro">
+        Here are some of the latest World Cup champions, with the final score and host country.
+      </p>
+
+      <div id="winnersContainer" class="cards-container"></div>
     </section>
 
-    <section id="champions">
+    <section id="champions" class="page-section light-section">
       <h2>Countries That Won The World Cup</h2>
-      <div id="championList" class="champions"></div>
+      <p class="section-intro">
+        These are all the countries that have won the men's FIFA World Cup.
+      </p>
+
+      <div id="championsContainer" class="champions-list"></div>
     </section>
 
-    <section id="facts">
+    <section id="facts" class="page-section">
       <h2>World Cup 2026 Facts</h2>
-      <div class="facts">
-        <div>
+
+      <div class="facts-container">
+        <div class="fact-box">
           <h3>48 Teams</h3>
-          <p>For the first time, the tournament will have 48 teams.</p>
+          <p>The 2026 World Cup will be the first one with 48 teams.</p>
         </div>
-        <div>
-          <h3>3 Host Countries</h3>
-          <p>Canada, Mexico, and the United States will host the tournament.</p>
+
+        <div class="fact-box">
+          <h3>3 Countries</h3>
+          <p>The tournament will be hosted by Canada, Mexico, and the United States.</p>
         </div>
-        <div>
-          <h3>16 Host Cities</h3>
-          <p>Matches will be played across 16 cities.</p>
+
+        <div class="fact-box">
+          <h3>16 Cities</h3>
+          <p>Games will be played in 16 different host cities.</p>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>Made with HTML, CSS, and JavaScript</p>
+    <p>World Cup 2026 website made with HTML, CSS, and JavaScript.</p>
   </footer>
 
   <script src="script.js"></script>

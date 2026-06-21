@@ -1,78 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>World Cup 2026</title>
+  <title>FIFA World Cup 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <h2>World Cup 2026</h2>
-      <div class="nav-links">
-        <a href="#winners">Recent Winners</a>
-        <a href="#champions">Champions</a>
-        <a href="#facts">2026 Facts</a>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-icon">⚽</span>
+      <span class="logo-text">WC 2026</span>
+    </div>
+    <div class="nav-links">
+      <a href="#recent">Recent Winners</a>
+      <a href="#champions">Champions</a>
+      <a href="#facts">2026 Facts</a>
+    </div>
+    <button class="nav-toggle" id="navToggle">☰</button>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Canada · Mexico · United States</p>
+      <h1 class="hero-title">FIFA<br>World Cup<br><span class="hero-year">2026</span></h1>
+      <p class="hero-sub">The biggest football tournament in history — 48 teams, 3 nations, one trophy.</p>
+      <a href="#recent" class="btn-primary">Explore Winners ↓</a>
+    </div>
+    <div class="hero-badge">
+      <span class="badge-num">48</span>
+      <span class="badge-label">Teams</span>
+    </div>
+  </section>
+
+  <div class="stats-banner">
+    <div class="stat-item">
+      <span class="stat-num" data-target="48">0</span>
+      <span class="stat-label">Teams</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="3">0</span>
+      <span class="stat-label">Host Countries</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="16">0</span>
+      <span class="stat-label">Host Cities</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="104">0</span>
+      <span class="stat-label">Total Matches</span>
+    </div>
+  </div>
+
+  <!-- RECENT WINNERS -->
+  <section class="section" id="recent">
+    <div class="section-header">
+      <p class="section-eyebrow">History</p>
+      <h2 class="section-title">Recent World Cup Winners</h2>
+      <p class="section-desc">The champions who lifted the most famous trophy in football.</p>
+    </div>
+    <div class="cards" id="winnerCards"></div>
+  </section>
+
+  <section class="section section-dark" id="champions">
+    <div class="section-header">
+      <p class="section-eyebrow">All Time</p>
+      <h2 class="section-title" style="color:#d4a017;">Hall of Champions</h2>
+      <p class="section-desc" style="color:#aaa;">Countries ranked by number of World Cup titles won.</p>
+    </div>
+    <div class="champion-list" id="championList"></div>
+  </section>
+
+  <section class="section" id="facts">
+    <div class="section-header">
+      <p class="section-eyebrow">What's New</p>
+      <h2 class="section-title">World Cup 2026 Facts</h2>
+      <p class="section-desc">This edition breaks records before a single ball is kicked.</p>
+    </div>
+    <div class="facts-grid">
+      <div class="fact-card fact-featured">
+        <div class="fact-icon">🏆</div>
+        <h3>Biggest Ever</h3>
+        <p>The 2026 World Cup is the largest in history — expanded from 32 to 48 teams for the first time.</p>
       </div>
-    </nav>
-
-    <section class="hero">
-      <div class="hero-text">
-        <p class="small-title">Canada - Mexico - United States</p>
-        <h1>FIFA World Cup 2026</h1>
-        <p>
-          The biggest football tournament is coming back. This page shows
-          some recent World Cup winners and every country that has won the cup.
-        </p>
-        <a href="#winners" class="main-btn">Start Exploring</a>
+      <div class="fact-card">
+        <div class="fact-icon">🌎</div>
+        <h3>3 Host Countries</h3>
+        <p>Canada, Mexico, and the USA share hosting duties across North America.</p>
       </div>
-    </section>
-  </header>
-
-  <main>
-    <section id="winners" class="page-section">
-      <h2>Last Few World Cup Winners</h2>
-      <p class="section-intro">
-        Here are some of the latest World Cup champions, with the final score and host country.
-      </p>
-
-      <div id="winnersContainer" class="cards-container"></div>
-    </section>
-
-    <section id="champions" class="page-section light-section">
-      <h2>Countries That Won The World Cup</h2>
-      <p class="section-intro">
-        These are all the countries that have won the men's FIFA World Cup.
-      </p>
-
-      <div id="championsContainer" class="champions-list"></div>
-    </section>
-
-    <section id="facts" class="page-section">
-      <h2>World Cup 2026 Facts</h2>
-
-      <div class="facts-container">
-        <div class="fact-box">
-          <h3>48 Teams</h3>
-          <p>The 2026 World Cup will be the first one with 48 teams.</p>
-        </div>
-
-        <div class="fact-box">
-          <h3>3 Countries</h3>
-          <p>The tournament will be hosted by Canada, Mexico, and the United States.</p>
-        </div>
-
-        <div class="fact-box">
-          <h3>16 Cities</h3>
-          <p>Games will be played in 16 different host cities.</p>
-        </div>
+      <div class="fact-card">
+        <div class="fact-icon">🏟️</div>
+        <h3>16 Host Cities</h3>
+        <p>Matches spread across 16 cities from Vancouver to Mexico City.</p>
       </div>
-    </section>
-  </main>
+      <div class="fact-card">
+        <div class="fact-icon">⚽</div>
+        <h3>104 Matches</h3>
+        <p>Up from 64 matches in previous tournaments — more football than ever before.</p>
+      </div>
+      <div class="fact-card">
+        <div class="fact-icon">🗓️</div>
+        <h3>June – July 2026</h3>
+        <p>The tournament runs through summer 2026, culminating in the final on July 19.</p>
+      </div>
+      <div class="fact-card">
+        <div class="fact-icon">💰</div>
+        <h3>Record Prize Money</h3>
+        <p>FIFA is expected to offer the highest prize pool in World Cup history for 2026.</p>
+      </div>
+    </div>
+  </section>
 
-  <footer>
-    <p>World Cup 2026 website made with HTML, CSS, and JavaScript.</p>
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-logo">⚽ WC 2026</span>
+      <p id="footerText" class="footer-text">Made with HTML, CSS and JavaScript</p>
+      <p class="footer-credit">A student project — built with passion 💪</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
